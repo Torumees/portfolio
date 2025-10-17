@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minu portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <meta name="description" content="Junior full stack arendaja portfolio: React, Kotlin/Java, Python, REST API-d" />
+</head>
+<body>
+    <header class="site-header">
+        <a class="logo" href="#">Egert</a>
+
+        <button class="nav-toggle" aria-label="Ava menüü">
+            <span class="bar"></span><span class="bar"></span><span class="bar"></span>
+        </button>
+
+        <nav class="site-nav">
+            <a href="#about">Minust</a>
+            <a href="#skills">Skills</a>
+            <a href="#projects">Projektid</a>
+            <a href="#contact" class="btn btn-primary">Kontakt</a>
+        </nav>
+    </header>
+        
+    <section class="hero">
+        <div class="hero__text">
+            <h1>Tere, olen Egert <span class="grad">tulevane full-stack arendaja</span>.</h1>
+            <p>Õpin ja ehitan Reacti (front) + Kotlin/Java (back) virnas. Mulle meeldib puhas kood, API-d ja päris probleemide lahendamine.</p>
+            <div class="hero__actions">
+                <a href="#projects" class="btn btn-primary">Vaata projekte</a>
+                <a href="#contact" class="btn btn-ghost">Võta ühendust</a>
+            </div>
+            <div class="socials">
+                <a href="https://github.com/Torumees" target="_blank" rel="noopener">Github</a>
+                <a href="#" target="_blank" rel="noopener">LinkedIn</a>
+            </div>
+        </div>
+        <div class="hero__image">
+            <img src="" alt="Profiilipilt" />
+        </div>
+    </section>    
+        
+    <section id="about" class="section">
+        <h2>Minust</h2>
+        <p>Olen noorem arendaja, kelle fookus on Reactis (komponendid, hooks, API ühendused) ja Kotlin/Java back-endis (REST, SQL). Eelnev kokkupuude Pythoniga, WordPressi API-integratsioonid ja skriptid. Tugev õppimissoov ja meeskonnatöö.</p>
+    </section>
+        
+    <section id="skills" class="section">
+        <h2>Oskused</h2>
+            <div class="cards">
+                <article class="card">
+                    <h3>Front-end</h3>
+                    <ul>
+                        <li>HTML, CSS (Flex, Grid), JS</li>
+                        <li>React (Hooks, Router)</li>
+                        <li>REST API kasutamine</li>
+                    </ul>
+                </article>
+                <article class="card">
+                    <h3>Back-end</h3>
+                    <ul>
+                        <li>Kotlin/Java (Spring Boot / Ktor - alustamas)</li>
+                        <li>REST API disain</li>
+                        <li>SQL (PostgreSQL/MySQL), ORM põhialused</li>
+                    </ul>
+                </article>
+                <article class="card">
+                    <h3>Tööriistad</h3>
+                    <ul>
+                        <li>Git & GitHub</li>
+                        <li>Docker (baas, peagi)</li>
+                        <li>Postman, Chrome DevTools</li>
+                    </ul>
+                </article>
+            </div>
+    </section>
+    
+    <section id="projects" class="section">
+        <h2>Projektid</h2>
+        <div class="grid">
+            <article class="project">
+                <h3>Weather App (React)</h3>
+                <p>Lihtne ilmarakendus avaliku API-ga. Otsing linnade kaupa, laadimise olek, veahaldus.</p>
+                <div class="project__links">
+                    <a href="#" class="btn btn-small" target="_blank" rel="noopener">Demo</a>
+                    <a href="#" class="btn btn-small" target="_blank" rel="noopener">Kood</a>
+                </div>
+            </article>
+
+            <article class="project">
+                <h3>Task Manager API (Kotlin/Java)</h3>
+                <p>CRUD REST API ülesannete halduseks. Endpointid, valideerimine, SQL, lihtsad testid.</p>
+                <div class="project__links">
+                    <a href="#" class="btn btn-small" target="_blank" rel="noopener">API Docs</a>
+                    <a href="#" class="btn btn-small" target="_blank" rel="noopener">Kood</a>
+                </div>
+            </article>
+
+            <article class="project">
+                <h3>portfolio</h3>
+                <p>See leht. Statiline front, responsiivne paigutus, kerge animatsioon.</p>
+                <div class="project__links">
+                    <a href="#" class="btn btn-small" target="_blank" rel="noopener">Live</a>
+                    <a href="#" class="btn btn-small" target="_blank" rel="noopener">Kood</a>
+                </div>
+            </article>
+        </div>
+    </section>
+
+    <section id="contact" class="section">
+        <h2>Kontakt</h2>
+        <form class="contact-form" onsubmit="return handleSubmit(event)">
+            <div class="form-row">
+                <label for="name">Nimi</label>
+                <input type="text" id="name" name="name" required></label>
+            </div>
+            <div class="form-row">
+                <label for="email">E-post</label>
+                <input type="email" id="email" name="email" required></label>
+            </div>
+            <div class="form-row">
+                <label for="msg">Sõnum</label>
+                <textarea id="msg" name="msg" rows="5" required></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">Saada</button>
+            <p id="form-status" class="form-status" aria-live="polite"></p>
+        </form>
+    </section>
+
+    <footer class="site-footer">
+        <p>© <span id="year"></span> Egert. Valmis React + Kotlin teekonnaks.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
